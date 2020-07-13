@@ -1,9 +1,9 @@
 " Vim with all enhancements
 source $VIMRUNTIME/vimrc_example.vim
 
-let $MYVIMRC='./.vimrc'
+"let $MYVIMRC='./.vimrc'
 
-call plug#begin('/opt/vim/plugin')
+call plug#begin('/home/prateek/.vimtmp/plugin')
     " for python folding
 	Plug 'https://github.com/tmhedberg/SimpylFold.git'
     " color scheme
@@ -62,7 +62,7 @@ set expandtab
 set hlsearch
 set incsearch
 set ignorecase
-set smartcase "make search case sensitive if uppercase are involved in search query
+set smartcase 
 
 
 "Text Rendering Options
@@ -85,6 +85,6 @@ set swapfile
 set splitbelow
 set splitright
 set clipboard=unnamed
-set backupdir=/opt/vim/backup//
-set directory=/opt/vim/swap//
-set undodir=/opt/vim/undo//
+set backupdir=~/.vimtmp/backup//
+set directory=~/.vimtmp/swap//
+set undodir=~/.vimtmp/undo//
