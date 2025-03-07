@@ -3,13 +3,16 @@ source $VIMRUNTIME/vimrc_example.vim
 
 "let $MYVIMRC='./.vimrc'
 
-call plug#begin('/home/prateek/.vimtmp/plugin')
+call plug#begin('~/.vimtmp/plugin')
     " for python folding
 	Plug 'https://github.com/tmhedberg/SimpylFold.git'
     " color scheme
 	Plug 'https://github.com/jnurmine/Zenburn.git'
     " python syntax
 	Plug 'https://github.com/vim-python/python-syntax.git'
+    " fuzzy finder
+	Plug 'junegunn/fzf.vim'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 "Leader and localleader
@@ -18,17 +21,25 @@ let maplocalleader = "\\"
 
 "Keybinding
 inoremap <leader><c-u> <esc>bve<S-u>ea
-nnoremap - ddkP
-nnoremap _ ddp
+inoremap jk <esc>
+
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+nnoremap - ddkP
+nnoremap _ ddp
+
 nnoremap <leader>" ea"<esc>hbi"<esc>lel
 nnoremap <leader>' ea'<esc>hbi'<esc>lel
-inoremap jk <esc>
+nnoremap <leader>` ea`<esc>hbi`<esc>lel
+
 nnoremap <leader>h <C-w><C-h>
-nnoremap <leader>l <C-w><C-l>
 nnoremap <leader>j <C-w><C-j>
 nnoremap <leader>k <C-w><C-k>
+nnoremap <leader>l <C-w><C-l>
+nnoremap <leader>c <C-w>c
+nnoremap <leader>v <C-w>v
+nnoremap <leader>s <C-w>s
 vnoremap <leader>' <esc>`<i'<esc>`>a'<esc>
 
 "Autocommands
