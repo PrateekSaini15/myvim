@@ -87,15 +87,16 @@ set colorcolumn=72
 set number
 set relativenumber
 set title
+set splitbelow
+set splitright
+set clipboard=unnamed
 syntax enable 
 let python_highlight_all=1
 
 "Miscellaneous Options
-set backup
-set swapfile
-set splitbelow
-set splitright
-set clipboard=unnamed
 set backupdir=~/.vimtmp/backup//
 set directory=~/.vimtmp/swap//
 set undodir=~/.vimtmp/undo//
+set backup
+set swapfile
+set undofile
